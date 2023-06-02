@@ -2,11 +2,10 @@
 #include <string>
 using namespace std;
 class Cinta{
-private:
-    int nivel;
-    string colorCinta;
-
 public:
+    int nivel;
+    std::string colorCinta;
+
     Cinta() {
         nivel = 1;
         actualizarColorCinta();
@@ -37,19 +36,7 @@ public:
             break;
         default:
             colorCinta = "Desconocido";
+            break;
         }
-    }
-
-    int getNivel() const {
-        return nivel;
-    }
-
-    void setNivel(int nuevoNivel) {
-        nivel = nuevoNivel;
-        actualizarColorCinta();
-    }
-
-    string getColorCinta() const {
-        return colorCinta;
     }
 };
