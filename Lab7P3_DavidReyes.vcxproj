@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cinta.cpp" />
+    <ClCompile Include="Estudiante.cpp" />
+    <ClCompile Include="Estudiante_Blockchain.cpp" />
+    <ClCompile Include="Estudiante_cobra.cpp" />
     <ClCompile Include="Lab7P3_DavidReyes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cinta.h" />
+    <ClInclude Include="Estudiante.h" />
+    <ClInclude Include="Estudiante_Blockchain.h" />
+    <ClInclude Include="Estudiante_cobra.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

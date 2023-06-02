@@ -1,19 +1,91 @@
-// Lab7P3_DavidReyes.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
 #include <iostream>
+#include "Cinta.h"
+#include"Estudiante.h"
+#include "Estudiante_Blockchain.h"
+#include"Estudiante_cobra.h"
+#include <string>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+void crearestudiante(vector<Estudiante*>cobra, vector<Estudiante*>blockchain) {
 
-int main()
-{
-    std::cout << "Hello World!\n";
+}
+void modificarestudiante(vector<Estudiante*>cobra, vector<Estudiante*>blockchain) {
+
+}
+void eliminarestudiante(vector<Estudiante*>cobra, vector<Estudiante*>blockchain) {
+
+}
+void listarestudiante(vector<Estudiante*>cobra, vector<Estudiante*>blockchain){
+	for (Estudiante* estudiante : estudiantes) {
+		estudiante->MostrarDatos();
+		cout << endl;
+	}
+}
+void promoverestudiante(vector<Estudiante*>cobra, vector<Estudiante*>blockchain) {
+	int opcionascenso,dojo;
+	cout << "1.estudiantes cobra\n2.estudiantes blockchain";
+	cin >> dojo;
+	if (dojo==1) {
+		for (Estudiante* estudiante : cobra) {
+			estudiante->MostrarDatos();
+			cout << endl;
+		}
+	}
+	else {
+		for (Estudiante* estudiante : blockchain) {
+			estudiante->MostrarDatos();
+			cout << endl;
+		}
+	}
+	cout << "Elija un estudiante";
+	cin >> opcionascenso;
+	
+}
+void degradarestudiante(vector<Estudiante*>cobra, vector<Estudiante*>blockchain) {
+}
+void simulacion(vector<Estudiante*>cobra, vector<Estudiante*>blockchain) {
 }
 
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
-
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
+void menu() {
+	srand(time(0));
+	int opcion = 1;
+	vector<Estudiante*> cobra,blockchain;
+	srand(time(0));
+	while (opcion != 8) {
+		cout << "1.Crear estudiante\n2.Modificar Estudiante\n3.Eliminar Estudiante\n4.Listar Estudiante\n5.Promover cinta del estudiante\n6.Degradar cinta del estudiante\n7.Simulacion\n8.Salir\n";
+		cin >> opcion;
+		switch (opcion) {
+		case 1:
+			crearestudiante(estudiantes);
+			break;
+		case 2:
+			modificarestudiante(estudiantes);
+			break;
+		case 3:
+			eliminarestudiante(estudiantes);
+			break;
+		case 4:
+			listarestudiante(estudiantes);
+			break;
+		case 5:
+			promoverestudiante(estudiantes);
+			break;
+		case 6:
+			degradarestudiante(estudiantes);
+			break;
+		case 7:
+			simulacion(estudiantes);
+			break;
+		case 8:
+			cout << "Buen dia";
+			break;
+		default:
+			cout << "Opcion no valida";
+		}
+	}
+}
+int main(){
+	menu();
+}
