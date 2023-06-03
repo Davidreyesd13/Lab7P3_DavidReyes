@@ -12,14 +12,14 @@ public:
     int fuerza;
     int resistencia;
     int overall;
-    const int vida;
+    const int Vida;
 
-    Estudiante(std::string _nombre, int _edad) : vida(100) {
+    Estudiante(std::string _nombre, int _edad):Vida(100) {
         nombre = _nombre;
         edad = _edad;
         cinta = new Cinta();
-        fuerza = rand() % 31;
-        resistencia = rand() % 31;
+        fuerza = 0+rand() % 30;
+        resistencia = 0+rand() % 30;
         overall = fuerza + resistencia;
     }
 
@@ -34,7 +34,7 @@ public:
         cout << "Fuerza: " << fuerza << endl;
         cout << "Resistencia: " << resistencia << endl;
         cout << "Overall: " << overall << endl;
-        cout << "Vida: " << vida << endl;
+        cout << "Vida: " << Vida << endl;
     }
 
     void ascender() {
@@ -119,5 +119,9 @@ public:
             break;
         }
         return static_cast<int>(resistencia * porcentajeCinta);
+    }
+    int getvida() const
+    {
+        return Vida;
     }
 };

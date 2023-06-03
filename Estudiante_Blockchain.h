@@ -7,7 +7,7 @@ public:
     int fuerzaBrazos;
 
     Estudiante_Blockchain(std::string _nombre, int _edad) : Estudiante(_nombre, _edad) {
-        fuerzaBrazos = rand() % 11;
+        fuerzaBrazos = 1+rand() % 10;
         overall += fuerzaBrazos;
     }
 

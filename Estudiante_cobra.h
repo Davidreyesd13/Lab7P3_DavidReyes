@@ -5,7 +5,7 @@ public:
     int fuerzaPiernas;
 
     Estudiante_Cobra(std::string _nombre, int _edad) : Estudiante(_nombre, _edad) {
-        fuerzaPiernas = rand() % 11;
+        fuerzaPiernas = 1+rand() % 10;
         overall += fuerzaPiernas;
     }
 
